@@ -20,8 +20,8 @@
         }
 
         .yin-yang {
-            width: 300px;
-            height: 300px;
+            width: 150px; /* Reducido a la mitad */
+            height: 150px; /* Reducido a la mitad */
             border-radius: 50%;
             background: linear-gradient(to left, #fff 5%, #fff 50%, #000 50%, #000 100%);
             overflow: hidden;
@@ -34,7 +34,7 @@
             animation-iteration-count: infinite;
             animation-play-state: running; /* Inicia la animación */
             position: relative;
-            border: 8px solid black;
+            border: 4px solid black; /* Reducido a la mitad */
         }
 
         /* Pausa la animación al pasar el cursor */
@@ -44,24 +44,24 @@
 
         .yin-yang::before {
             content: '';
-            width: 35px;
-            height: 35px;
+            width: 17.5px; /* Reducido a la mitad */
+            height: 17.5px; /* Reducido a la mitad */
             background: #fff; /* Punto blanco */
             border-radius: 50%;
-            border: 58px solid #000; /* Borde negro para el punto blanco */
-            margin-bottom: 150px; /* Ajuste del punto blanco */
+            border: 29px solid #000; /* Borde negro para el punto blanco */
+            margin-bottom: 75px; /* Ajuste del punto blanco */
             position: absolute;
             z-index: 2;
         }
 
         .yin-yang::after {
             content: '';
-            width: 35px;
-            height: 35px;
+            width: 17.5px; /* Reducido a la mitad */
+            height: 17.5px; /* Reducido a la mitad */
             background: #000; /* Punto negro */
             border-radius: 50%;
-            border: 58px solid #fff; /* Borde blanco para el punto negro */
-            margin-top: 150px; /* Ajuste del punto negro */
+            border: 29px solid #fff; /* Borde blanco para el punto negro */
+            margin-top: 75px; /* Ajuste del punto negro */
             position: absolute;
             z-index: 2;
         }
