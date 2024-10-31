@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Símbolo Yin Yang Rotativo</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            min-height: 100vh;
+            background: #fff;
+        }
+
+        .yin-yang {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(to left, #fff 5%, #fff 50%, #000 50%, #000 100%);
+            overflow: hidden;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            animation-name: rotate;
+            animation-duration: 4s;
+            animation-timing-function: linear;
+            animation-iteration-count: infinite;
+            animation-play-state: running; /* Inicia la animación */
+            position: relative;
+            border: 8px solid black;
+        }
+
+        /* Pausa la animación al pasar el cursor */
+        .yin-yang:hover {
+            animation-play-state: paused;
+        }
+
+        .yin-yang::before {
+            content: '';
+            width: 35px;
+            height: 35px;
+            background: #fff; /* Punto blanco */
+            border-radius: 50%;
+            border: 58px solid #000; /* Borde negro para el punto blanco */
+            margin-bottom: 150px; /* Ajuste del punto blanco */
+            position: absolute;
+            z-index: 2;
+        }
+
+        .yin-yang::after {
+            content: '';
+            width: 35px;
+            height: 35px;
+            background: #000; /* Punto negro */
+            border-radius: 50%;
+            border: 58px solid #fff; /* Borde blanco para el punto negro */
+            margin-top: 150px; /* Ajuste del punto negro */
+            position: absolute;
+            z-index: 2;
+        }
+
+        @keyframes rotate {
+            0% {
+                transform: rotateZ(0deg);
+            }
+            100% {
+                transform: rotateZ(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="yin-yang"></div>
+</body>
+</html>
